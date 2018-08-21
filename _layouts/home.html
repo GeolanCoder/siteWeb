@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/styleGeolanCode.css">
+  <title>GeolanCoder</title>
+</head>
+<body>
+  {%- include mainNav.html -%}
+
+  <div class="container-fluid">
+
+    <div class="row" >
+      <div class="col-md-4" id="zoneInfoGeolan">
+        <section>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <img id="avatarBlogger" class="rounded-circle" src="assets\avatarGeolan.jpg" alt="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-justify">
+              <strong>A propos</strong>
+              <p>
+                {{ content }}
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              {%- include social.html -%}
+            </div>
+          </div>
+
+        </section>
+      </div>
+
+      <div class="col-md-8">
+        <aside>
+          <div class="row">
+
+            <div class="alert alert-info" role="alert">
+              Ce site ne contient pour l'instant aucun article !
+            </div>
+            {%- for post in site.posts -%}
+            <div class="col-md-12">
+              <h3>{{ post.title | escape }}</h3>
+              <span>par Geolan le 16/08/2018</span>
+              <p>{{ post.excerpt }}</p>
+              <a href="{{ post.url | relative_url }}">Lire la suite</a>
+            </div>
+            {%- endfor -%}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+  </div>
+{%- include footer.html -%}
+
+  </body>
+  </html>
