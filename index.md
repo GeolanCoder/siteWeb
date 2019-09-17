@@ -7,4 +7,4 @@ layout: home
 
 Je vous propose mes services en tant que formateur et de developpeur web.  
   
-Tech stack : Node.js, Express.js, Angular.js, Sequelize
+Tech stack : Node.js, Express.js, Angular.js, Sequelize !!
